@@ -91,3 +91,13 @@ button {
 .btn-edit:hover {
   color: #c94141;
 }
+#sort-buttons button {
+  padding: 10px;
+  font-size: 1em;
+  margin: 0 20px 0 20px;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+#sort-buttons button:hover {
+  background-color: aquamarine;
+}

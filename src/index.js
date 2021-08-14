@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   })
 
-
 });
 
 function createTask(task, priority, due) {
@@ -53,11 +52,20 @@ function sort(direction) {
   const itemsLow = document.querySelectorAll("#tasks li.low");
   const itemsMed = document.querySelectorAll("#tasks li.medium");
   const itemsHigh = document.querySelectorAll("#tasks li.high");
-  const items = [];
+  let items = [];
   if (direction === "low") {
-    return [...itemsLow, ...itemsMed, ...itemsHigh];
+    items = [...itemsLow, ...itemsMed, ...itemsHigh];
   } else if (direction === "high") {
-    return [...itemsHigh, ...itemsMed, ...itemsLow];
+    items = [...itemsHigh, ...itemsMed, ...itemsLow];
   }
-  console.log(items);
+  if (items.length > 0) {
+    const taskContainer = document.getElementById("tasks");
+    taskContainer.textContent = '';
+    for (const item of items) {
+      taskContainer.appendChild(item);
+      console.log("Appended.");
+    }
+  } else {
+    alert("Nothing to sort, sorry.");
+  }
 }
