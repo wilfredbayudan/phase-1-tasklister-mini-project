@@ -7,7 +7,9 @@ html {
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(#333, #1a1a1a);
+  margin: 0;
+  padding: 0;
 }
 
 button {
@@ -25,13 +27,67 @@ button {
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+  min-width: 500px;
 }
 
 #list {
   margin: 10px;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.75);
+  width: 90%;
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+#tasks {
+  list-style: none;
+  padding-left: 0;
+}
+#tasks li {
+  margin: 2px 0 2px 0;
+  padding: 15px;
+  background-color: #ffffff;;
+  border: 1px solid #dddddd;
+}
+#tasks li.low {
+  color: #059200;
+}
+#tasks li.medium {
+  color: #b9ad00;
+}
+#tasks li.high {
+  color: #720101;
+}
+.btn-delete {
+  float: right;
+  font-size: 1em;
+  margin: 0;
+  padding: 5px 7px 5px 7px;
+  position: relative;
+  top: -7px;
+  right: -4px;
+  background-color: #c94141;
+  color: #ffffff;
+  border: 1px solid #252525;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-edit {
+  float: right;
+  font-size: 1em;
+  margin: 0;
+  padding: 5px 7px 5px 7px;
+  position: relative;
+  top: -7px;
+  right: -4px;
+  background-color: #cfcfcf;
+  color: #000000;
+  border: 1px solid #252525;
+  border-right: none;
+  font-weight: normal;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  color: #c94141;
 }
